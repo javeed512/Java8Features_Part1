@@ -1,0 +1,98 @@
+
+java.lang.Comparable;
+
+
+ compareTo();
+
+Classes which provide implementation to Comparable interface:
+String , All Wrapper - Integer ,Float , Double , Boolean , Character etc
+
+
+StringBuffer is not implementing comparable interface so TreeSet or TreeMap cannot do sorting for StringBuffer.
+
+
+Solution:
+
+1. Go and modify that particular class and add Comparable interface along with compareTo()
+
+
+public class StringBuffer implements Comparable{
+
+
+
+}
+
+User Define class:
+
+
+public class  Employee implement Comparable{
+
+	compareTo(){
+
+		}
+
+}
+
+
+2. Create a seperate class which provides implementation to Comparator Interface
+
+java.util.Comparator  ----> equals() , compare();
+
+
+public class MyComparator  implements   Comparator<StringBuffer>{
+
+	@Override
+	public int compare(StringBuffer sb1, StringBuffer sb2) {
+
+
+		String s1 = sb1.toString();
+		
+		String s2 = sb2.toString();
+		
+		
+		
+		return  s1.compareTo(s2);
+	}
+
+}
+
+
+In main method:
+================
+
+
+
+		Set<StringBuffer>  set = new TreeSet<StringBuffer>(new MyComparator());
+		
+		
+		set.add(new StringBuffer("B"));
+		set.add(new StringBuffer("D"));
+		set.add(new StringBuffer("A"));
+		set.add(new StringBuffer("E"));
+		set.add(new StringBuffer("C"));
+		
+		System.out.println(set);
+			
+
+
+
+
+
+
+
+In Java8  , we can have interface with method definition ie., default or static methods only.
+
+
+
+public  interface MyInterface {}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+Java 8:
+=======
+
+JDK 1.8 
+IDE: Eclipse , Intellij , STS- Spring Tool Suit 
+
+
+Java Naming Convections:
+==========================
+
+Naming Rules in Java Lang.
+
+packages:
+
+lower case
+
+syn:-   domain.company.application.module.submodule;
+
+ex:      com.cgi.bankapp.customer.login
+
+		java.lang
+   		java.util
+
+	metrorail.ticket.payment
+
+--------------------------------------------------
+
+Class/Interface
+
+InitCap:
+
+	Object , String , StringBuffer, Integer , Long , Double , ArrayList , HashMap
+
+	Comparator , Comparable , List , Set , Map , Runnable , Iterator 
+
+     
+     Student , Customer , Bank  , Product , ProductDetails , StudentCourses
+
+	Service , Repository , ICustomer , IService
+
+
+--------------------------------------------------------
+variables / methods 
+
+camel-case 
+
+     account  , accountNumber , age ,  personAge, studentRollNumber
+
+     get() , set() , getDetails() , getStudentDetails() 
+
+ 
+----------------------------------------------------------------
+
+Java8 Features:
+===============
+1. Functional Interface
+
+An Interface which consist of only one abstract method.
+
+Types of Functional Interfaces:
+================================
+a. Consumer Functional Interface
+
+  void  set(int a, String b);  // no return value only params
+
+
+b. Supplier Functional Interface
+
+	int get(){return 100;}     // any return type including boolean , without params
+
+
+
+c. Predicate Functional Interface
+
+	boolean  isValid(String str);  // only boolean as return value and params are mandatory
+
+d. Function  Functional Interface
+
+
+	 
+		double  get(int a, String s); // any return type 
+
+
+
+
+
+2. Lambda Expression
+
+Implementation to the Functional Interface.
+
+
+3. java.time package
+4. Stream API
+
+
+
+
+
+
+
+
+
+
+
+
+	
